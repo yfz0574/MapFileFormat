@@ -115,7 +115,7 @@ def main():
     parser.add_option("-I","--IDA_map",action="store_true",dest="IDAMap",default="False",help="IDA符号文件兼容(预留选项)") 
     (options, args) = parser.parse_args()
     if len(args) < 1:
-        parser.error('incorrect number of arguments,please type -h for help.')
+        parser.error('incorrect number of arguments,must have filename,for more info please type -h for help.')
     #if options.split()
     return map2format(args[0], os.path.splitext(args[0])[0]+'_fix.map',options)
 
